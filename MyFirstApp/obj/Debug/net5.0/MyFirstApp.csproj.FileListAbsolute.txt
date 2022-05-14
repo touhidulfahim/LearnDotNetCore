@@ -403,3 +403,5 @@ C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\obj\Debug\net5.0\MyFirst
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\obj\Debug\net5.0\ref\MyFirstApp.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\obj\Debug\net5.0\MyFirstApp.pdb
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\obj\Debug\net5.0\MyFirstApp.genruntimeconfig.cache
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\MyFirstApp.Data.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\MyFirstApp.Data.pdb
