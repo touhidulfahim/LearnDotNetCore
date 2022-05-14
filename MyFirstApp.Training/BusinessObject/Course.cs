@@ -8,6 +8,7 @@ namespace MyFirstApp.Training.BusinessObject
 {
     public class Course
     {
-
+        public string Title { get; set; }
+        public decimal Fees { get; set; }
     }
 }

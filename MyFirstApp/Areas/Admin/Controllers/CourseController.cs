@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MyFirstApp.Areas.Admin.Models;
 
 namespace MyFirstApp.Areas.Admin.Controllers
 {
@@ -10,7 +11,9 @@ namespace MyFirstApp.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = new CourseModel();
+            model.LoadModelData();
+            return View(model);
         }
     }
 }

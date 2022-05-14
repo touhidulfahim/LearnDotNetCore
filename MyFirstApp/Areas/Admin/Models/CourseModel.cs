@@ -27,9 +27,10 @@ namespace MyFirstApp.Areas.Admin.Models
             Courses = _courseService.GetAllCourses();
         }
 
-        public string CourseTitle { get; set; }
-        public string CourseFees { get; set; }
-        public DateTime CourseStartDate { get; set; }
-        
+        // public string CourseTitle { get; set; }
+        // public string CourseFees { get; set; }
+        // public DateTime CourseStartDate { get; set; }
+
+
     }
 }
