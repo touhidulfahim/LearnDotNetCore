@@ -1,0 +1,15 @@
+2022-05-14 16:28:51.569 +06:00 [INF] Application Starting up
+2022-05-14 16:28:55.535 +06:00 [FTL] Application start-up failed
+Autofac.Core.Activators.Reflection.NoConstructorsFoundException: No accessible constructors were found for the type 'MyFirstApp.Data.MyFirstDbContext'.
+   at Autofac.Core.Activators.Reflection.DefaultConstructorFinder.GetDefaultPublicConstructors(Type type)
+   at Autofac.Core.Activators.Reflection.DefaultConstructorFinder.FindConstructors(Type targetType)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ConfigurePipeline(IComponentRegistryServices componentRegistryServices, IResolvePipelineBuilder pipelineBuilder)
+   at Autofac.Core.Registration.ComponentRegistration.BuildResolvePipeline(IComponentRegistryServices registryServices, IResolvePipelineBuilder pipelineBuilder)
+   at Autofac.Core.Registration.ComponentRegistration.BuildResolvePipeline(IComponentRegistryServices registryServices)
+   at Autofac.Core.Registration.ComponentRegistryBuilder.Build()
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at MyFirstApp.Program.Main(String[] args) in C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\Program.cs:line 33

@@ -30,7 +30,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -407,7 +407,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "5.0.17"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.1/_._": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -2058,6 +2058,21 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "MyFirstApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/MyFirstApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyFirstApp.Data.dll": {}
         }
       }
     }
@@ -7143,6 +7158,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "MyFirstApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../MyFirstApp.Data/MyFirstApp.Data.csproj",
+      "msbuildProject": "../MyFirstApp.Data/MyFirstApp.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7155,6 +7175,7 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "MyFirstApp.Data >= 1.0.0",
       "Serilog.AspNetCore >= 5.0.0",
       "Serilog.Sinks.File >= 5.0.0"
     ]
@@ -7189,7 +7210,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Data\\MyFirstApp.Data.csproj": {
+              "projectPath": "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Data\\MyFirstApp.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7231,6 +7256,8 @@
             "version": "[5.0.17, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.17, )"
           },
