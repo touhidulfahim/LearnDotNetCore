@@ -13,3 +13,4 @@ Autofac.Core.Activators.Reflection.NoConstructorsFoundException: No accessible c
    at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at MyFirstApp.Program.Main(String[] args) in C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\Program.cs:line 33
+2022-05-14 17:15:49.687 +06:00 [INF] Application Starting up
