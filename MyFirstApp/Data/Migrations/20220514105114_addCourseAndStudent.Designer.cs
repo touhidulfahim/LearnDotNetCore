@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyFirstApp.Data;
+using MyFirstApp.Training;
+using MyFirstApp.Training.Context;
 
 namespace MyFirstApp.Data.Migrations
 {

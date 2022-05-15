@@ -1,0 +1,17 @@
+﻿@using MyFirstApp.Training.BusinessObject
+@model CourseModel
+@{
+    ViewData["Title"] = "Course";
+}
+
+
+<div class="container">
+    <h2>Course List</h2>
+    <div class="row col-md-12">
+        @foreach (var item in Model.Courses)
+        {
+            <div class="col-md-6">@item.Title</div>
+            <div class="col-md-6">@item.Fees</div>
+        }
+    </div>
+</div>

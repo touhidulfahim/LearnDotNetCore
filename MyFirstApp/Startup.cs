@@ -16,6 +16,8 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using MyFirstApp.Models;
 using MyFirstApp.Services;
+using MyFirstApp.Training;
+using MyFirstApp.Training.Context;
 
 namespace MyFirstApp
 {
@@ -40,8 +42,7 @@ namespace MyFirstApp
         public void ConfigureContainer(ContainerBuilder builder)
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
-
-            builder.RegisterModule(new DataModule(connectionInfo.connectionString, 
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString, 
                 connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new WebModule());
         }
