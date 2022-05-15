@@ -3,7 +3,7 @@ using MyFirstApp.Training.Entities;
 
 namespace MyFirstApp.Training.Context
 {
-    public class MyFirstDbContext:DbContext
+    public class MyFirstDbContext:DbContext, IMyFirstDbContext
     {
         private readonly string _connectionString;
         private readonly string _migrationAssemblyName;

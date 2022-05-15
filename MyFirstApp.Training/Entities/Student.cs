@@ -1,8 +1,9 @@
 ﻿using System;
+using MyFirstApp.Data;
 
 namespace MyFirstApp.Training.Entities
 {
-    public class Student
+    public class Student:IEntity<int>
     {
         public int Id { get; set; }
         public string Name { get; set; }

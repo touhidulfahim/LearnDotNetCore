@@ -9,13 +9,15 @@ namespace MyFirstApp.Training.UnitOfWorks
 {
     public class TrainingUnitOfWork : UnitOfWork, ITrainingUnitOfWork
     {
-        public IRepository<Student> Students { get; private set; }
-        public IRepository<Course> Courses { get; private set; }
-
-        public TrainingUnitOfWork(MyFirstDbContext context) : base(context)
+        public IStudentRepository Students { get; private set; }
+        public ICourseRepository Courses { get; private set; }
+        
+        public TrainingUnitOfWork(IMyFirstDbContext context,
+            IStudentRepository students, ICourseRepository courses
+            ) : base((DbContext)context)
         {
-            Students = new StudentRepository(context);
-            Courses = new CourseRepository(context);
+            Students = students;
+            Courses = courses;
         }
 
     }

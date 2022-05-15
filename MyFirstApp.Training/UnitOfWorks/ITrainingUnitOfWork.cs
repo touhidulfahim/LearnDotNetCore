@@ -1,11 +1,13 @@
 ﻿using MyFirstApp.Data;
+using MyFirstApp.Training.Context;
 using MyFirstApp.Training.Entities;
+using MyFirstApp.Training.Repositories;
 
 namespace MyFirstApp.Training.UnitOfWorks
 {
     public interface ITrainingUnitOfWork: IUnitOfWork
     {
-        IRepository<Course> Courses { get; }
-        IRepository<Student> Students { get; }
+        ICourseRepository Courses { get; }
+        IStudentRepository Students { get; }
     }
 }

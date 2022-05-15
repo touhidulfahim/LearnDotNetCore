@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstApp.Data
+namespace MyFirstApp.Training.Context
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IMyFirstDbContext
     {
-       void Save();
-       void SaveAsync();
     }
 }
