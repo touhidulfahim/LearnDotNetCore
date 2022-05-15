@@ -16,6 +16,8 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using MyFirstApp.Models;
 using MyFirstApp.Services;
+using MyFirstApp.Training;
+using MyFirstApp.Training.Context;
 
 namespace MyFirstApp
 {
@@ -39,16 +41,35 @@ namespace MyFirstApp
         public static ILifetimeScope AutofacContainer { get; set; }
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            var connectionInfo = GetConnectionStringAndAssemblyName();
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString, 
+                connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new WebModule());
         }
+
+        private (string connectionString, string migrationAssemblyName) GetConnectionStringAndAssemblyName()
+        {
+            var connectionStringName = "DefaultConnection";
+            var connectionString = Configuration.GetConnectionString(connectionStringName);
+            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+            return (connectionString, migrationAssemblyName);
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var connectionInfo = GetConnectionStringAndAssemblyName();
+
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionInfo.connectionString));
+             
+            services.AddDbContext<MyFirstDbContext>(options =>
+                options.UseSqlServer(connectionInfo.connectionString, 
+                    b => 
+                        b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
-
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => 
+                    options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.ConfigureApplicationCookie(options =>
