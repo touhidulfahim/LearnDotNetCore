@@ -13,4 +13,8 @@
     <Folder Include="Context\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyFirstApp.Data\MyFirstApp.Data.csproj" />
+  </ItemGroup>
+
 </Project>

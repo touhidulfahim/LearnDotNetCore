@@ -10,5 +10,6 @@ namespace MyFirstApp.Training.BusinessObject
     {
         public string Title { get; set; }
         public decimal Fees { get; set; }
+        public DateTime StartDate { get; set; }
     }
 }

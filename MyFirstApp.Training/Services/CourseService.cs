@@ -5,22 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyFirstApp.Training.Context;
+using MyFirstApp.Training.UnitOfWorks;
 
 namespace MyFirstApp.Training.Services
 {
     public class CourseService : ICourseService
     {
-        private readonly MyFirstDbContext _context;
+        private readonly ITrainingUnitOfWork _trainingUnitOfWork;
 
-        public CourseService(MyFirstDbContext context)
+        public CourseService(ITrainingUnitOfWork trainingUnitOfWork)
         {
-            _context = context;
+            _trainingUnitOfWork = trainingUnitOfWork;
         }
-
 
         public IList<Course> GetAllCourses()
         {
-            var courseList= _context.Courses.ToList();
+            var courseList= _trainingUnitOfWork.Courses.GetAll();
             var courses = new List<Course>();
 
             foreach (var entity in courseList)
@@ -33,6 +33,18 @@ namespace MyFirstApp.Training.Services
                 courses.Add(course);
             }
             return courses;
+        }
+
+        public void CreateCourse(Course course)
+        {
+            _trainingUnitOfWork.Courses.Add(
+                new Entities.Course()
+                {
+                    Title = course.Title,
+                    Fees = course.Fees,
+                    StartDate = course.StartDate
+                });
+            _trainingUnitOfWork.Save();
         }
     }
 }

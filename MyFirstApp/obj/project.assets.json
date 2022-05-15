@@ -2408,7 +2408,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "MyFirstApp.Data": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyFirstApp.Training.dll": {}
