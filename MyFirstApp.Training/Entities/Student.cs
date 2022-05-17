@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MyFirstApp.Data;
 
 namespace MyFirstApp.Training.Entities
@@ -11,5 +12,6 @@ namespace MyFirstApp.Training.Entities
         public string Gender { get; set; }
         public string FathersName { get; set; }
         public string MothersName { get; set; }
+        public List<CourseStudent> EnrolledCourses { get; set; }
     }
 }

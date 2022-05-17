@@ -8,9 +8,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyFirstApp.Data
 {
-    public interface IRepository<TEntity, TKey, TContext>
+    public interface IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>
-        where TContext : DbContext
     {
         void Add(TEntity item);
         void Update(TEntity item);

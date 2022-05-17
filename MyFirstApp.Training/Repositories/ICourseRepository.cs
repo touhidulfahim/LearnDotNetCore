@@ -9,9 +9,9 @@ using MyFirstApp.Training.Entities;
 
 namespace MyFirstApp.Training.Repositories
 {
-    public interface ICourseRepository:
-        IRepository<Course, int, MyFirstDbContext>
+    public interface ICourseRepository :
+        IRepository<Course, int>
     {
-
+        int GetCount(Func<object, bool> p);
     }
 }

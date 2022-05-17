@@ -11,7 +11,7 @@ using MyFirstApp.Training.Entities;
 namespace MyFirstApp.Training.Repositories
 {
     public class StudentRepository: 
-        Repository<Student, int, MyFirstDbContext>, IStudentRepository
+        Repository<Student, int>, IStudentRepository
     {
         public StudentRepository(MyFirstDbContext context) : base(context)
         {

@@ -11,5 +11,6 @@ namespace MyFirstApp.Training.Entities
         public decimal Fees { get; set; }
         public DateTime StartDate { get; set; }
         public List<Topic> Topics { get; set; }
+        public List<CourseStudent> EnrolledStudents { get; set; }
     }
 }

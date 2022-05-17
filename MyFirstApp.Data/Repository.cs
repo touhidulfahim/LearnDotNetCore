@@ -6,14 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyFirstApp.Data
 {
-    public abstract class Repository<TEntity, TKey, TContext> 
-        : IRepository<TEntity, TKey, TContext> where TEntity
-        : class, IEntity<TKey> where TContext:DbContext
+    public abstract class Repository<TEntity, TKey> 
+        : IRepository<TEntity, TKey> where TEntity
+        : class, IEntity<TKey>
     {
-        protected readonly TContext _dbContext;
+        protected readonly DbContext _dbContext;
         protected readonly DbSet<TEntity> _dbSet;
 
-        protected Repository(TContext dbContext)
+        protected Repository(DbContext dbContext)
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<TEntity>();

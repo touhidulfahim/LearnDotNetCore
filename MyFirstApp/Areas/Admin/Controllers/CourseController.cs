@@ -15,5 +15,22 @@ namespace MyFirstApp.Areas.Admin.Controllers
             model.LoadModelData();
             return View(model);
         }
+
+        public IActionResult Enroll()
+        {
+            var model = new EnrollModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Enroll(EnrollModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //model.EnrollStudent();   
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
