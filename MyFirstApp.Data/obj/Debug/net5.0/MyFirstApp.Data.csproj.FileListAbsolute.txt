@@ -1,14 +1,11 @@
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.deps.json
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.dll
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\ref\MyFirstApp.Data.dll
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.pdb
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.AssemblyInfoInputs.cache
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.AssemblyInfo.cs
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.csproj.CoreCompileInputs.cache
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.dll
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\ref\MyFirstApp.Data.dll
-C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.pdb
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.deps.json
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\ref\MyFirstApp.Data.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\MyFirstApp.Data.pdb
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -290,4 +287,7 @@ C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\re
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\System.Xml.XPath.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\refs\WindowsBase.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\ref\MyFirstApp.Data.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.pdb
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.csproj.AssemblyReference.cache

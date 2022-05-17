@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MyFirstApp.Areas.Admin.Models;
+using MyFirstApp.Models;
 
 namespace MyFirstApp.Areas.Admin.Controllers
 {
@@ -15,5 +16,34 @@ namespace MyFirstApp.Areas.Admin.Controllers
             model.LoadModelData();
             return View(model);
         }
+
+        public IActionResult Enroll()
+        {
+            var model = new EnrollModel();
+            return View(model);
+        }
+
+
+        public JsonResult GetCourseData()
+        {
+            var dar = new DataTableAjaxRequestModel(Request);
+            var model = new CourseModel();
+            var data=model.GetCourses(dar);
+            return Json(data);
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Enroll(EnrollModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //model.EnrollStudent();   
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

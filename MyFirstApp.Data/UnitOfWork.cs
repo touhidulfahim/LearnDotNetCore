@@ -9,22 +9,10 @@ namespace MyFirstApp.Data
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private DbContext _context;
-        public UnitOfWork(DbContext context)
-        {
-            _context = context;
-        }
-
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
-
-        public void SaveAsync()
-        {
-            _context.SaveChangesAsync();
-        }
-        
-
+        protected readonly DbContext _context;
+        public UnitOfWork(DbContext context) => _context = context;
+        public void Dispose() => _context?.Dispose();
+        public void Save() => _context?.SaveChanges();
+        public void SaveAsync() => _context?.SaveChangesAsync();
     }
 }

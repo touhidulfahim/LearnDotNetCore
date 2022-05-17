@@ -10,10 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\MyFirstApp.Common\MyFirstApp.Common.csproj" />
     <ProjectReference Include="..\MyFirstApp.Data\MyFirstApp.Data.csproj" />
   </ItemGroup>
 

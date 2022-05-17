@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyFirstApp.Data;
-using MyFirstApp.Training;
 using MyFirstApp.Training.Context;
 
 namespace MyFirstApp.Data.Migrations
@@ -21,7 +19,7 @@ namespace MyFirstApp.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MyFirstApp.Data.Course", b =>
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +40,22 @@ namespace MyFirstApp.Data.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("MyFirstApp.Data.Student", b =>
+            modelBuilder.Entity("MyFirstApp.Training.Entities.CourseStudent", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CourseId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("CourseStudent");
+                });
+
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Student", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +82,7 @@ namespace MyFirstApp.Data.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("MyFirstApp.Data.Topic", b =>
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Topic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,9 +105,28 @@ namespace MyFirstApp.Data.Migrations
                     b.ToTable("Topics");
                 });
 
-            modelBuilder.Entity("MyFirstApp.Data.Topic", b =>
+            modelBuilder.Entity("MyFirstApp.Training.Entities.CourseStudent", b =>
                 {
-                    b.HasOne("MyFirstApp.Data.Course", "Courses")
+                    b.HasOne("MyFirstApp.Training.Entities.Course", "Courses")
+                        .WithMany("EnrolledStudents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyFirstApp.Training.Entities.Student", "Students")
+                        .WithMany("EnrolledCourses")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Courses");
+
+                    b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Topic", b =>
+                {
+                    b.HasOne("MyFirstApp.Training.Entities.Course", "Courses")
                         .WithMany("Topics")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -103,9 +135,16 @@ namespace MyFirstApp.Data.Migrations
                     b.Navigation("Courses");
                 });
 
-            modelBuilder.Entity("MyFirstApp.Data.Course", b =>
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Course", b =>
                 {
+                    b.Navigation("EnrolledStudents");
+
                     b.Navigation("Topics");
+                });
+
+            modelBuilder.Entity("MyFirstApp.Training.Entities.Student", b =>
+                {
+                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }
