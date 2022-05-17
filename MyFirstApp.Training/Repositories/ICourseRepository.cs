@@ -12,6 +12,6 @@ namespace MyFirstApp.Training.Repositories
     public interface ICourseRepository :
         IRepository<Course, int>
     {
-        int GetCount(Func<object, bool> p);
+        
     }
 }

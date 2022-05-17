@@ -10,9 +10,11 @@ using MyFirstApp.Training.Entities;
 
 namespace MyFirstApp.Training.Repositories
 {
-    public class CourseRepository: Repository<Course, int>, ICourseRepository
+    public class CourseRepository
+        : Repository<Course, int>, ICourseRepository
     {
-        public CourseRepository(IMyFirstDbContext context) : base((DbContext) context)
+        public CourseRepository(IMyFirstDbContext context) 
+            : base((DbContext) context)
         {
 
         }

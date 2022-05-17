@@ -35,7 +35,8 @@ namespace MyFirstApp.Training.Services
                 var course = new Course()
                 {
                     Title = entity.Title,
-                    Fees = entity.Fees
+                    Fees = entity.Fees,
+                    StartDate = entity.StartDate,
                 };
                 courses.Add(course);
             }
@@ -85,10 +86,25 @@ namespace MyFirstApp.Training.Services
             _trainingUnitOfWork.Save();
         }
 
+        public (IList<Course> records, int total, int totalDisplay)
+            GetCourses(int pageIndex, int pageSize, string searchText, string sortText)
+        {
+            var courseData=_trainingUnitOfWork.Courses.GetDynamic(x=>x.Title==searchText, sortText, String.Empty, pageIndex,pageSize);
+            var result = (from course in courseData.data
+                select new Course
+                {
+                    Id = course.Id,
+                    Title = course.Title,
+                    Fees = course.Fees,
+                    StartDate = course.StartDate
+                }).ToList();
+            return (result, courseData.total, courseData.totalDisplay);
+        }
+
         private bool IsTitleAlreadyExists(string title) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == title) > 0;
         private bool IsValidDateTime(DateTime startDateTime) =>
-            _trainingUnitOfWork.Courses.GetCount(x => x.Title == title) > 0;
+            _trainingUnitOfWork.Courses.GetCount(x => x.StartDate == startDateTime) > 0;
 
     }
 }
