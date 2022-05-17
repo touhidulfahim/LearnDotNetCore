@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GkhJwdz5O1udQLUjqD53V1ROO8emZIXnGrhWldUE+Tn/+OB8AJYU3b/+Jr3Mbx6QnndaNu6/ca0OBpze0VKmTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Common\\MyFirstApp.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TOUHID\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\TOUHID\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+    "C:\\Users\\TOUHID\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\TOUHID\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

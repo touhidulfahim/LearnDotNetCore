@@ -1,0 +1,12 @@
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\bin\Debug\net5.0\MyFirstApp.Common.deps.json
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\bin\Debug\net5.0\MyFirstApp.Common.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\bin\Debug\net5.0\ref\MyFirstApp.Common.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\bin\Debug\net5.0\MyFirstApp.Common.pdb
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.csproj.AssemblyReference.cache
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.AssemblyInfoInputs.cache
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.AssemblyInfo.cs
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\ref\MyFirstApp.Common.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Common\obj\Debug\net5.0\MyFirstApp.Common.pdb

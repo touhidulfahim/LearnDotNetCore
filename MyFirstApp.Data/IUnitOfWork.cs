@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyFirstApp.Data
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork:IDisposable
     {
        void Save();
        void SaveAsync();

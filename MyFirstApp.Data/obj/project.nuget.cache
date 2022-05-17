@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B69QozqIJuB3rPUyJ2l2FMeOeF35gtV+OqNqKmF2f3IJNgOH50liTY60vXdm0oI74xTmE9cuv46dFK1h7COZUw==",
+  "dgSpecHash": "bHU0M9fgk1fg/YkPFm4yNy7uoN2g2OKaL/K8avle9LAza1+o0H5bvrabBpmLCI/9vjm2yoF6DSAGsT7Vr7BE/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Data\\MyFirstApp.Data.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\TOUHID\\.nuget\\packages\\system.linq.dynamic.core\\1.2.18\\system.linq.dynamic.core.1.2.18.nupkg.sha512",
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\TOUHID\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
