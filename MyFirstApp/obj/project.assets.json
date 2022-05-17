@@ -2397,6 +2397,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "MyFirstApp.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MyFirstApp.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyFirstApp.Common.dll": {}
+        }
+      },
       "MyFirstApp.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2419,6 +2432,7 @@
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "MyFirstApp.Common": "1.0.0",
           "MyFirstApp.Data": "1.0.0"
         },
         "compile": {
@@ -8100,6 +8114,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "MyFirstApp.Common/1.0.0": {
+      "type": "project",
+      "path": "../MyFirstApp.Common/MyFirstApp.Common.csproj",
+      "msbuildProject": "../MyFirstApp.Common/MyFirstApp.Common.csproj"
+    },
     "MyFirstApp.Data/1.0.0": {
       "type": "project",
       "path": "../MyFirstApp.Data/MyFirstApp.Data.csproj",
@@ -8122,6 +8141,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "MyFirstApp.Common >= 1.0.0",
       "MyFirstApp.Data >= 1.0.0",
       "MyFirstApp.Training >= 1.0.0",
       "Serilog.AspNetCore >= 5.0.0",
@@ -8159,6 +8179,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Common\\MyFirstApp.Common.csproj": {
+              "projectPath": "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Common\\MyFirstApp.Common.csproj"
+            },
             "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Data\\MyFirstApp.Data.csproj": {
               "projectPath": "C:\\Users\\TOUHID\\source\\repos\\LearnDotNetCore\\MyFirstApp.Data\\MyFirstApp.Data.csproj"
             },

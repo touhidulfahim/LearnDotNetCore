@@ -290,3 +290,4 @@ C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\bin\Debug\net5.0\re
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\ref\MyFirstApp.Data.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.pdb
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Data\obj\Debug\net5.0\MyFirstApp.Data.csproj.AssemblyReference.cache

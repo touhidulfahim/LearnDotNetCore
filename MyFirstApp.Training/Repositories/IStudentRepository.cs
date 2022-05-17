@@ -10,7 +10,7 @@ using MyFirstApp.Training.Entities;
 namespace MyFirstApp.Training.Repositories
 {
     public interface IStudentRepository: 
-        IRepository<Student, int, MyFirstDbContext>
+        IRepository<Student, int>
     {
 
     }

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using MyFirstApp.Common;
 using MyFirstApp.Models;
 using MyFirstApp.Services;
 using MyFirstApp.Training;
@@ -42,8 +43,11 @@ namespace MyFirstApp
         public void ConfigureContainer(ContainerBuilder builder)
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
-            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString, 
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
+            builder.RegisterModule(new CommonModule(connectionInfo.connectionString,
+                            connectionInfo.migrationAssemblyName));
+
             builder.RegisterModule(new WebModule());
         }
 
@@ -62,13 +66,13 @@ namespace MyFirstApp
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionInfo.connectionString));
-             
+
             services.AddDbContext<MyFirstDbContext>(options =>
-                options.UseSqlServer(connectionInfo.connectionString, 
-                    b => 
+                options.UseSqlServer(connectionInfo.connectionString,
+                    b =>
                         b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
-            services.AddDefaultIdentity<IdentityUser>(options => 
+            services.AddDefaultIdentity<IdentityUser>(options =>
                     options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
