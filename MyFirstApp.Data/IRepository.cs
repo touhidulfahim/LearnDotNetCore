@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MyFirstApp.Data
 {
     public interface IRepository<TEntity, TKey>
-        where TEntity : class, IEntity<TKey>
+       where TEntity : class, IEntity<TKey>
     {
         void Add(TEntity entity);
         void Remove(TKey id);

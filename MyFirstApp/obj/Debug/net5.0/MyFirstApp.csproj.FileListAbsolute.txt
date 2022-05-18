@@ -457,3 +457,5 @@ C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\obj\Debug\net5.0\MyFirst
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\MyFirstApp.Common.dll
 C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\MyFirstApp.Common.pdb
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

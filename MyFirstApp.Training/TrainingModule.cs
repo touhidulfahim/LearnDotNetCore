@@ -30,14 +30,15 @@ namespace MyFirstApp.Training
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<StudentRepository>().As<IStudentRepository>()
-                            .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<CourseRepository>().As<ICourseRepository>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
                 .InstancePerLifetimeScope();
+
             builder.RegisterType<CourseService>().As<ICourseService>()
-                            .InstancePerLifetimeScope();
-            
+                .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using Microsoft.AspNetCore.Http;
 using MyFirstApp.Models;
 using MyFirstApp.Training.BusinessObject;
 using MyFirstApp.Training.Services;
@@ -12,20 +13,18 @@ namespace MyFirstApp.Areas.Admin.Models
     public class CourseModel
     {
         private ICourseService _courseService;
-        public IList<Course> Courses { get; set; }
+        private IHttpContextAccessor _httpContextAccessor;
+
         public CourseModel()
         {
             _courseService = Startup.AutofacContainer.Resolve<ICourseService>();
+            _httpContextAccessor = Startup.AutofacContainer.Resolve<IHttpContextAccessor>();
         }
 
-        public CourseModel(ICourseService courseService)
+        public CourseModel(ICourseService courseService, IHttpContextAccessor httpContextAccessor)
         {
-
-        }
-        
-        public void LoadModelData()
-        {
-            Courses = _courseService.GetAllCourses();
+            _courseService = courseService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         internal object GetCourses(DataTableAjaxRequestModel tableModel)
@@ -43,19 +42,18 @@ namespace MyFirstApp.Areas.Admin.Models
                 data = (from record in data.records
                         select new string[]
                         {
-                            record.Title,
-                            record.Fees.ToString(),
-                            record.StartDate.ToString(),
-                            record.Id.ToString()
+                                record.Title,
+                                record.Fees.ToString(),
+                                record.StartDate.ToString(),
+                                record.Id.ToString()
                         }
                     ).ToArray()
             };
         }
 
-        // public string CourseTitle { get; set; }
-        // public string CourseFees { get; set; }
-        // public DateTime CourseStartDate { get; set; }
-
-
+        internal void Delete(int id)
+        {
+            _courseService.DeleteCourse(id);
+        }
     }
 }

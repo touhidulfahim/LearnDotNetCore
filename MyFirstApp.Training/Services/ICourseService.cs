@@ -9,8 +9,13 @@ namespace MyFirstApp.Training.Services
 {
     public interface ICourseService
     {
-        IList<BusinessObject.Course> GetAllCourses();
+        IList<Course> GetAllCourses();
         void EnrollStudent(Course course, Student student);
-        (IList<Course>records, int total, int totalDisplay) GetCourses(int pageIndex, int pageSize, string searchText, string sortText);
+        void CreateCourse(Course course);
+        (IList<Course> records, int total, int totalDisplay) GetCourses(int pageIndex, int pageSize,
+            string searchText, string sortText);
+        Course GetCourse(int id);
+        void UpdateCourse(Course course);
+        void DeleteCourse(int id);
     }
 }

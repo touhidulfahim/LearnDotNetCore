@@ -1,15 +1,17 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core;
 
 
 namespace MyFirstApp.Data
 {
-    public abstract class Repository<TEntity, TKey> 
-        : IRepository<TEntity, TKey> where TEntity
-        : class, IEntity<TKey>
+    public abstract class Repository<TEntity, TKey>
+         : IRepository<TEntity, TKey>
+         where TEntity : class, IEntity<TKey>
     {
         protected DbContext _dbContext;
         protected DbSet<TEntity> _dbSet;
@@ -96,7 +98,6 @@ namespace MyFirstApp.Data
             return _dbSet.Find(id);
         }
 
-
         public virtual (IList<TEntity> data, int total, int totalDisplay) Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
@@ -134,7 +135,6 @@ namespace MyFirstApp.Data
                 else
                     return (result.ToList(), total, totalDisplay);
             }
-            //throw new NotImplementedException();
         }
 
         public virtual (IList<TEntity> data, int total, int totalDisplay) GetDynamic(
@@ -209,7 +209,6 @@ namespace MyFirstApp.Data
                 else
                     return query.ToList();
             }
-            //throw new NotImplementedException();
         }
 
         public virtual IList<TEntity> GetDynamic(Expression<Func<TEntity, bool>> filter = null,
@@ -247,6 +246,5 @@ namespace MyFirstApp.Data
             }
         }
 
-        
     }
 }

@@ -5,15 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using MyFirstApp.Areas.Admin.Models;
 using MyFirstApp.Models;
+using Microsoft.Extensions.Logging;
 
 namespace MyFirstApp.Areas.Admin.Controllers
 {
     public class CourseController : AdminBaseController
     {
+        private readonly ILogger<CourseController> _logger;
+
+        public CourseController(ILogger<CourseController> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult Index()
         {
             var model = new CourseModel();
-            model.LoadModelData();
+            //model.LoadModelData();
             return View(model);
         }
 

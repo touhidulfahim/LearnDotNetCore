@@ -10,6 +10,9 @@ namespace MyFirstApp.Areas.Admin.Models
 {
     public class EnrollModel
     {
+        public int StudentId { get; set; }
+        public string CourseName { get; set; }
+
         private readonly ICourseService _courseService;
 
         public EnrollModel()
@@ -22,17 +25,20 @@ namespace MyFirstApp.Areas.Admin.Models
             _courseService = courseService;
         }
 
-        public void EnrollStudent(string courseName, int studentId)
+        public void EnrollStudent()
         {
             var courses = _courseService.GetAllCourses();
-            var selectedCourses = courses.Where(x=>x.Title==courseName).FirstOrDefault();
-            var student = new Student()
+
+            var selectedCourse = courses.Where(x => x.Title == CourseName).FirstOrDefault();
+
+            var student = new Student
             {
-                Id = studentId,
+                Id = StudentId,
                 DOB = DateTime.Now,
-                Name = "Harami"
+                Name = "Jalaluddin",
             };
-            _courseService.EnrollStudent(selectedCourses,student);
+
+            _courseService.EnrollStudent(selectedCourse, student);
         }
     }
 }
