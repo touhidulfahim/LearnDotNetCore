@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MyFirstApp.Training
-build_property.ProjectDir = C:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Training\
+build_property.ProjectDir = c:\Users\TOUHID\source\repos\LearnDotNetCore\MyFirstApp.Training\
